@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://hypermemetic.ai',
+  site: 'https://www.hypermemetic.ai',
   output: 'static',
   compressHTML: true,
   build: {

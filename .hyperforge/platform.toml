@@ -3,7 +3,7 @@
 
 [site]
 kind = "static"
-domain = "hypermemetic.ai"
+domain = "www.hypermemetic.ai"
 zone_id = "a81fdc3125a732050ea621b5c7ccc531"
 
 [build]
