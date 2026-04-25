@@ -1,5 +1,4 @@
-# Cloudflare Pages redirect rules. Catch-all 301 to apex.
-# CF Pages applies this at edge; the index.html fallback below only runs
-# if a client somehow bypasses these rules.
-/ https://hypermemetic.ai/ 301
-/* https://hypermemetic.ai/:splat 301
+# Catch-all 301 to apex. `!` forces the redirect even when a static file
+# (index.html) would otherwise match — CF Pages applies static files first
+# without it.
+/* https://hypermemetic.ai/:splat 301!
