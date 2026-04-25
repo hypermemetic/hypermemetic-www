@@ -1,0 +1,3 @@
+# Cloudflare Pages redirect rules. Force www.hypermemetic.ai to apex.
+# `!` overrides any matching file/route in the project.
+/* https://hypermemetic.ai/:splat 301!

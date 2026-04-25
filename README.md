@@ -1,31 +1,14 @@
 # hypermemetic-www
 
-The `hypermemetic.ai` landing page. Astro static site, deployed through the
-plexus-platform's `site.*` methods using the repo-backed config at
-`.hyperforge/platform.toml`.
+Redirect shell for `www.hypermemetic.ai` → `https://hypermemetic.ai/`.
 
-## Local dev
+No build step. CF Pages serves the contents of `public/` directly:
 
-```
-npm install
-npm run dev    # http://localhost:4321
-```
+- `_redirects` does the 301 at the edge for every path
+- `index.html` is a fallback (meta-refresh + visible link) for any
+  client that doesn't follow `_redirects`
 
-## Build
-
-```
-npm run build  # outputs to dist/
-```
-
-## Deploy
-
-The platform reads `.hyperforge/platform.toml` and handles the rest:
-
-```
-synapse platform site_add --tenant hypermemetic --repo .
-```
-
-On subsequent commits:
+Update via the platform:
 
 ```
 synapse platform site_redeploy --tenant hypermemetic --name www

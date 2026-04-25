@@ -1,5 +1,8 @@
-# Deploy config for the Hypermemetic platform (plexus-platform).
-# Read by `site_add_from_repo --repo <this-dir>` — see PLATFORM-15.
+# www.hypermemetic.ai → 301 to apex hypermemetic.ai
+#
+# No build step: the repo IS the served content (public/_redirects + a
+# fallback index.html). install_command and command both empty per
+# schema v1.
 
 version = "1"
 
@@ -9,9 +12,9 @@ domain = "www.hypermemetic.ai"
 zone_id = "a81fdc3125a732050ea621b5c7ccc531"
 
 [build]
-command = "npm run build"
-output_dir = "dist"
-install_command = "npm install"
+command = ""
+output_dir = "public"
+install_command = ""
 
 [deploy]
 project_name = "hypermemetic-www"
