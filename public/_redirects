@@ -1,4 +1,0 @@
-# Catch-all 301 to apex. `!` forces the redirect even when a static file
-# (index.html) would otherwise match — CF Pages applies static files first
-# without it.
-/* https://hypermemetic.ai/:splat 301!
