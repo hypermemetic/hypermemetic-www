@@ -1,5 +1,7 @@
 # Deploy config for the Hypermemetic platform (plexus-platform).
-# Read by `site_add --repo <this-dir>` — see PLATFORM-15.
+# Read by `site_add_from_repo --repo <this-dir>` — see PLATFORM-15.
+
+version = "1"
 
 [site]
 kind = "static"
@@ -9,7 +11,6 @@ zone_id = "a81fdc3125a732050ea621b5c7ccc531"
 [build]
 command = "npm run build"
 output_dir = "dist"
-node_version = 22
 install_command = "npm install"
 
 [deploy]
